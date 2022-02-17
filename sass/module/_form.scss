@@ -1,0 +1,593 @@
+.formWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 74px;
+  top: 110px;
+  width: 500px;
+  &.center {
+    align-items: center;
+    top: 130px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.formName {
+  position: relative;
+  margin-bottom: 16px;
+  .formNameImage {
+    position: relative;
+    width: 313px;
+  }
+}
+
+.formNotice {
+  position: relative;
+  margin-top: 50px;
+  font-family: $font-stack;
+  font-size: fontSizeAdjustment(1.6) * 1rem;
+  line-height: 23px;
+  color: $init-text-color;
+}
+
+.formContent {
+  position: relative;
+  width: 500px;
+  min-height: 375px;
+  background: #ffffff;
+  border: 4px solid $init-text-color;
+  box-shadow: 6px 6px 0px #000000;
+  border-radius: 5px;
+  padding: 30px 50px 40px;
+  box-sizing: border-box;
+  z-index: 3;
+  .backIcon {
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    cursor: pointer;
+  }
+  .formTitle {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: $font-stack;
+    font-weight: 500;
+    font-size: fontSizeAdjustment(2.4) * 1rem;
+    line-height: 35px;
+    margin-bottom: 36px;
+    color: $init-text-color;
+  }
+  .formTab {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .tabTitle {
+    position: relative;
+    display: inline-flex;
+    font-family: $font-stack;
+    padding: 0 11px;
+    height: 47px;
+    font-weight: 500;
+    font-size: fontSizeAdjustment(2.4) * 1rem;
+    color: $init-text-color;
+    box-sizing: border-box;
+    &:first-child {
+      margin-right: 19px;
+    }
+    &:hover,
+    &:active {
+      color: $init-text-color;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 8px;
+      background: $init-green;
+      border-radius: 10px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &.nonActivated {
+      color: #a9a9a9;
+      &:hover,
+      &:active {
+        color: #a9a9a9;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.formDescription {
+  position: relative;
+  padding: 0 20px;
+  width: 100%;
+  justify-content: center;
+  font-family: $font-stack;
+  font-size: fontSizeAdjustment(1.6) * 1rem;
+  color: #6A6A6A;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  &.left {
+    justify-content: flex-start;
+    margin-bottom: 28px;
+  }
+}
+
+.form {
+  .formLabel {
+    position: absolute;
+    display: flex;
+    font-family: $font-stack;
+    color: $init-gray;
+    top: 14px;
+    left: 14px;
+    width: 100%;
+    font-size: fontSizeAdjustment(1.6) * 1rem;
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  /* static */
+  .memberName {
+    font-family: $font-stack;
+    font-size: fontSizeAdjustment(2.4) * 1rem;
+    line-height: 35px;
+    color: $init-text-color;
+    margin-bottom: 6px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .memberDescription {
+    font-family: $font-stack-en;
+    font-size: fontSizeAdjustment(1.4) * 1rem;
+    line-height: 16px;
+    color: $init-gray;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .textBox {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    .title {
+      font-family: $font-stack-en;
+      font-size: fontSizeAdjustment(1.4) * 1rem;
+      line-height: 16px;
+      color: $init-gray;
+    }
+    .text {
+      font-family: $font-stack-en;
+      font-size: fontSizeAdjustment(1.8) * 1rem;
+      line-height: 21px;
+      color: $init-text-color;
+    }
+  }
+  /* input */
+  .inputBox {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    &.marginBottom40 {
+      margin-bottom: 40px;
+    }
+    &.error {
+      .formInput {
+        border: 1px solid $init-error-color;
+      }
+      .errorText {
+        display: flex;
+      }
+    }
+    .inputRow {
+      position: relative;
+      box-sizing: border-box;
+      &.hasText {
+        .formLabel {
+          top: 8px;
+          font-size: fontSizeAdjustment(1.2) * 1rem;
+        }
+      }
+    }
+    .formInput {
+      position: relative;
+      width: 100%;
+      height: 52px;
+      font-family: $font-stack-en;
+      font-weight: 400;
+      font-size: fontSizeAdjustment(1.6) * 1rem;
+      color: $init-text-color;
+      border: 1px solid #C8C8C8;
+      border-radius: 3px;
+      padding: 20px 14px 0;
+      box-sizing: border-box;
+      &:disabled {
+        cursor: auto;
+        background-color: #f4f4f4;
+      }
+      &:focus {
+        + .formLabel {
+          top: 8px;
+          font-size: fontSizeAdjustment(1.2) * 1rem;
+        }
+      }
+    }
+  }
+  /* radio */
+  .radioBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    .radioTitle {
+      font-family: $font-stack;
+      font-size: fontSizeAdjustment(1.6) * 1rem;
+      color: $init-text-color;
+      margin-right: 30px;
+    }
+    .radioRow {
+      position: relative;
+      display: flex;
+      .radioLabel {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-family: $font-stack;
+        font-size: fontSizeAdjustment(1.6) * 1rem;
+        color: $init-text-color;
+        padding-left: 32px;
+        box-sizing: border-box;
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+      .formRadio {
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        top: 2px;
+        left: 0;
+        margin: 0;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          height: 24px;
+          width: 24px;
+          background: #FFFFFF;
+          border: 1px solid #C8C8C8;
+          border-radius: 100%;
+          box-sizing: border-box;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        &:checked {
+          &::before{
+            border: 7px solid $init-green;
+          }
+        }
+      }
+    }
+  }
+  /* select */
+  .selectBox {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    &.error {
+      .selectRow .formSelect {
+        border: 1px solid $init-error-color;
+      }
+      .errorText {
+        display: flex;
+      }
+    }
+    .selectRow {
+      position: relative;
+      .formSelect {
+        position: relative;
+        width: 100%;
+        height: 52px;
+        font-family: $font-stack-en;
+        font-weight: 400;
+        font-size: fontSizeAdjustment(1.6) * 1rem;
+        color: $init-text-color;
+        border: 1px solid #C8C8C8;
+        border-radius: 3px;
+        padding: 20px 14px 0 12px;
+        box-sizing: border-box;
+        background: url("/images/arrow.svg") no-repeat right;
+        background-position: calc(100% - 20px) 20px;
+        appearance: none;
+        cursor: pointer;
+        &:disabled {
+          cursor: auto;
+          background-color: #f4f4f4;
+        }
+      }
+      .formLabel {
+        top: 8px;
+        font-size: fontSizeAdjustment(1.2) * 1rem;
+      }
+    }
+  }
+  /* update */
+  .updateBox {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 25px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    &.error {
+      .upadateButtonBox {
+        .updateButton {
+          border: 1px solid $init-error-color;
+          color: $init-error-color;
+        }
+      }
+    }
+    &.hasFile {
+      .upadatePreview {
+        display: flex;
+      }
+      .upadateButtonBox {
+        display: none;
+      }
+    }
+    .updateTitle {
+      font-family: $font-stack;
+      font-weight: 500;
+      font-size: fontSizeAdjustment(1.6) * 1rem;
+      line-height: 23px;
+      color: $init-text-color;
+      margin-bottom: 4px;
+    }
+    .updateDescription {
+      font-family: $font-stack;
+      font-size: fontSizeAdjustment(1.4) * 1rem;
+      line-height: 20px;
+      color: $init-gray;
+      margin-bottom: 15px;
+    }
+    .upadatePreview {
+      display: none;
+      position: relative;
+      .removeImageIcon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        right: -8px;
+        top: -8px;
+        cursor: pointer;
+      }
+      .updatePhoto {
+        width: 100%;
+        max-width: 212px;
+      }
+    }
+    .upadateButtonBox {
+      position: relative;
+      input {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 34px;
+        z-index: 1;
+        cursor: pointer;
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)
+      }
+      .updateButton {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 22px;
+        height: 32px;
+        font-family: $font-stack;
+        font-size: fontSizeAdjustment(1.6) * 1rem;
+        line-height: 23px;
+        border: 1px solid #00904F;
+        border-radius: 100px;
+        color: $init-green;
+        cursor: pointer;
+      }
+    }
+  }
+  .policyBox {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    &.error {
+      .checkBoxClick {
+        &::before {
+          border: 1px solid $init-error-color;
+        }
+      }
+    }
+    .policyRow {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 26px;
+      box-sizing: border-box;
+      .formCheckBox {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        z-index: 1;
+        cursor: pointer;
+        &:checked {
+          + .checkBoxClick {
+            &::before { 
+              background: $init-green;
+            }
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      >a {
+        color: $init-green;
+        &:hover,
+        &:active {
+          color: $init-green;
+        }
+      }
+    }
+  }
+  .buttonBox {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: flex;
+    width: 100%;
+  }
+  .errorText {
+    display: none;
+    font-family: $font-stack;
+    font-size: fontSizeAdjustment(1.2) * 1rem;
+    line-height: 14px;
+    color: $init-error-color;
+    padding: 6px 14px 0;
+    box-sizing: border-box;
+  }
+  .toolBox {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+
+.passwordPage {
+  .toolBox {
+    display: none;
+    justify-content: center;
+  }
+}
+
+.profilePage {
+  .formContent {
+    width: 392px;
+    min-height: auto;
+    padding: 40px 30px 40px;
+    &.center {
+      position: relative;
+      padding-top: 130px;
+    }
+  }
+  .toolBox {
+    justify-content: flex-start;
+    margin: 30px 0 6px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .formWrapper{
+    width: 100%;
+    &:center {
+      top: 120px;
+    }
+  }
+
+  .signUpPage {
+    .formDescription,
+    .radioBox,
+    .selectBox,
+    .updateBox,
+    .policyBox {
+      padding: 0;
+    }
+  }
+
+  .signUpPage,
+  .logInPage {
+    .formWrapper {
+      right: 0;
+      top: 70px;
+    }
+    .formContent {
+      box-shadow: none;
+      border: none;
+      width: 100%;
+      height: 100vh;
+      padding: 50px 27px;
+      .formTab {
+        margin-bottom: 32px;
+      }
+    }
+    .toolBox {
+      display: flex;
+    }
+    .form {
+      .inputBox,
+      .buttonBox,
+      .toolBox {
+        padding: 0;
+      }
+    }
+  }
+
+  .passwordPage {
+    .formWrapper {
+      right: 0;
+      top: 70px;
+    }
+    .formContent {
+      box-shadow: none;
+      border: none;
+      width: 100%;
+      height: 100vh;
+      padding: 50px 27px;
+      .backIcon {
+        top: 54px;
+      }
+    }
+    .toolBox {
+      display: flex;
+    }
+    .formDescription.left {
+      margin-bottom: 36px;
+    }
+    .form {
+      .inputBox,
+      .buttonBox {
+        padding: 0;
+      }
+    }
+  }
+
+  .profilePage .formContent {
+    width: 90%;
+    max-width: 392px;
+  }
+}

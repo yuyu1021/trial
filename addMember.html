@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- showStatus為顯示右下角狀態彈出 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>會員檔案 | 新增一般會員</title>
+</head>
+<body>
+  <div class="mainWrapper systemPage showStatus">
+    <header class="headerWrapper">
+      <div class="headerContainer">
+        <a href="index.html" alt="logo" class="logo">
+          <img src="images/logo.svg" alt="logo" class="logoImage">
+        </a>
+        <nav class="headerNav">
+          <a href="#" alt="財務投資" class="nav">
+            財務投資
+          </a>
+          <a href="#" alt="業務菁英" class="nav">
+            業務菁英
+          </a>
+          <a href="#" alt="數位科技" class="nav">
+            數位科技
+          </a>
+          <a href="#" alt="數理精算" class="nav">
+            數理精算
+          </a>
+        </nav>
+        <!-- 手機版menu -->
+        <div id="headerMenuIcon" class="headerMenuIcon"></div>
+        <div class="mobileHeaderMenu">
+          <div class="mobileAvatarBox">
+            <div class="mobileMemberAvatar">
+              王
+            </div>
+            <div class="mobileMemberName">
+              Hi,王大明
+            </div>
+          </div>
+          <div class="mobileMenuList">
+            <ul>
+              <li>
+                <a href="learning_achievement.html" alt="learning achievement">學習成就</a>
+              </li>
+              <li>
+                <!-- 依據權限判斷連結的頁面 -->
+                <a href="editMember.html" alt="edit admin">個人檔案</a>
+                <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+              </li>
+              <div class="divider">
+                <span>課程學習</span>
+              </div>
+              <li>
+                <a href="" alt="financial investment">財務投資</a>
+              </li>
+              <li>
+                <a href="" alt="Business elite">業務菁英</a>
+              </li>
+              <li>
+                <a href="" alt="digital technology">數位科技</a>
+              </li>
+              <li>
+                <a href="" alt="mathematical actuarial">數理精算</a>
+              </li>
+              <hr class="divider">
+              <li class="logOut">登出</li>
+            </ul>
+          </div>
+        </div>
+        <!--- 如以登入headerRightArea補上 login-->
+        <div class="headerRightArea login">
+          <a href="signup.html" alt="註冊/登入" class="loginButton">
+            註冊 / 登入
+          </a>
+          <div id="avatar" class="memberAvatar">
+            王
+            <div class="memberMenu">
+              <ul>
+                <li>
+                  Hi,王大明
+                </li>
+                <hr class="divider">
+                <li>
+                  <a href="system_member_list.html" alt="member list">會員列表</a>
+                </li>
+                <li>
+                  <!-- 依據權限判斷連結的頁面 -->
+                  <a href="editMember.html" alt="edit admin">個人檔案</a>
+                  <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+                </li>
+                <hr class="divider" style="margin-bottom: 22px;">
+                <li class="logOut">
+                  登出
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </header>
+    <main class="container">
+      <div class="memberFormWrapper">
+        <div class="memberFormHeader">
+          <div class="memberFormTitle">會員檔案 / 新增一般會員</div>
+          <div class="buttonBox">
+            <button type="submit" class="button" name="addMember">建立會員</button>
+          </div>
+        </div>
+        <div class="memberFormContainer">
+          <div class="memberFormContent">
+            <div class="memberFormTitle">會員資料</div>
+            <div class="memberForm form">
+              <div class="inputBox">
+                <div class="inputRow">
+                  <input type="text" class="formInput"/>
+                  <label class="formLabel">姓名</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <div class="radioBox">
+                <div class="radioTitle">性別</div>
+                <div class="radioRow">
+                  <label for="gender" class="radioLabel">
+                    <input type="radio" class="formRadio" name="gender" checked>
+                    男
+                  </label>
+                  <label for="gender" class="radioLabel">
+                    <input type="radio" class="formRadio" name="gender">
+                    女
+                  </label>
+                </div>
+              </div>
+              <div class="selectBox">
+                <div class="selectRow">
+                  <select class="formSelect" name="school">
+                    <option value="">請選擇學校</option>
+                    <option value="1">國立大樹大學</option>
+                  </select>
+                  <label class="formLabel">學校</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <div class="selectBox">
+                <div class="selectRow">
+                  <select class="formSelect" disabled name="dept">
+                    <option value="">請選擇系別</option>
+                    <option value="1">園藝系</option>
+                  </select>
+                  <label class="formLabel">系別</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <div class="inputBox">
+                <div class="inputRow">
+                  <input type="text" class="formInput"/>
+                  <label class="formLabel">聯絡電話</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <!-- inputBox如錯誤補上 class => error -->
+              <div class="inputBox">
+                <!-- inputRow如有值補上 class => hasText -->
+                <div class="inputRow">
+                  <input type="text" class="formInput" name="email"/>
+                  <label class="formLabel">輸入Email</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <div class="inputBox">
+                <div class="inputRow">
+                  <input type="password" class="formInput" name="password"/>
+                  <label class="formLabel">設定密碼</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <div class="inputBox">
+                <div class="inputRow">
+                  <input type="password" class="formInput" name="passwordConfirm"/>
+                  <label class="formLabel">再次確認密碼</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <hr class="divider">
+              <div class="updateBox">
+                <div class="updateTitle">在學證明</div>
+                <div class="updateDescription">請上傳學生證或當學期在學證明相關文件之jpg圖檔，
+                  檔案需小於1M</div>
+                <div class="upadatePreview">
+                  <img id="removeIcon" src="/images/removeImage.svg" alt="remove image icon" class="removeImageIcon">
+                  <img id="upadatePhoto" src="" alt="photo" class="updatePhoto">
+                </div>
+                <div class="upadateButtonBox">
+                  <div class="updateButton">
+                    <input id="updateFile" type="file" accept="image/jpg" name="file">
+                    上傳圖片
+                  </div>
+                </div>
+              </div>
+              <hr class="divider">
+              <div class="selectBox">
+                <div class="selectRow">
+                  <select class="formSelect">
+                    <option value="1">開啟</option>
+                    <option value="2">關閉</option>
+                  </select>
+                  <label class="formLabel">會員狀況</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="memberFormContent">
+            <div class="memberFormTitle">學習歷程</div>
+            <div class="memberForm">
+              <table class="table">
+                <thead class="tableHead">
+                  <tr>
+                    <th>項目</th>
+                    <th>通過認證</th>
+                  </tr>
+                </thead>
+                <tbody class="tableBody">
+                  <tr>
+                    <td>財務投資</td>
+                    <td>
+                      <div class="toggleButton">
+                        <input type="checkbox" class="toggleButtonCheckBox" />
+                        <div class="ball"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>業務菁英</td>
+                    <td>
+                      <div class="toggleButton">
+                        <input type="checkbox" class="toggleButtonCheckBox" />
+                        <div class="ball"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>數位科技</td>
+                    <td>
+                      <div class="toggleButton">
+                        <input type="checkbox" class="toggleButtonCheckBox" />
+                        <div class="ball"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>數理精算</td>
+                    <td>
+                      <div class="toggleButton">
+                        <input type="checkbox" class="toggleButtonCheckBox" />
+                        <div class="ball"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="statusBox">
+      成功新增會員！
+    </aside>
+  </div>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

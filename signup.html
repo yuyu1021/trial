@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>註冊</title>
+</head>
+<body>
+  <div class="mainWrapper signUpPage">
+    <header class="headerWrapper">
+      <div class="headerContainer">
+        <a href="index.html" alt="logo" class="logo">
+          <img src="images/logo.svg" alt="logo" class="logoImage">
+        </a>
+        <nav class="headerNav">
+          <a href="#" alt="財務投資" class="nav">
+            財務投資
+          </a>
+          <a href="#" alt="業務菁英" class="nav">
+            業務菁英
+          </a>
+          <a href="#" alt="數位科技" class="nav">
+            數位科技
+          </a>
+          <a href="#" alt="數理精算" class="nav">
+            數理精算
+          </a>
+        </nav>
+        <!-- 手機版menu -->
+        <div id="headerMenuIcon" class="headerMenuIcon"></div>
+        <div class="mobileHeaderMenu">
+          <div class="mobileAvatarBox">
+            <div class="mobileMemberAvatar">
+              王
+            </div>
+            <div class="mobileMemberName">
+              Hi,王大明
+            </div>
+          </div>
+          <div class="mobileMenuList">
+            <ul>
+              <li>
+                <a href="learning_achievement.html" alt="learning achievement">學習成就</a>
+              </li>
+              <li>
+                <!-- 依據權限判斷連結的頁面 -->
+                <a href="editMember.html" alt="edit admin">個人檔案</a>
+                <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+              </li>
+              <div class="divider">
+                <span>課程學習</span>
+              </div>
+              <li>
+                <a href="" alt="financial investment">財務投資</a>
+              </li>
+              <li>
+                <a href="" alt="Business elite">業務菁英</a>
+              </li>
+              <li>
+                <a href="" alt="digital technology">數位科技</a>
+              </li>
+              <li>
+                <a href="" alt="mathematical actuarial">數理精算</a>
+              </li>
+              <hr class="divider">
+              <li class="logOut">登出</li>
+            </ul>
+          </div>
+        </div>
+        <!--- 如以登入headerRightArea補上 login-->
+        <div class="headerRightArea">
+          <a href="signup.html" alt="註冊/登入" class="loginButton">
+            註冊 / 登入
+          </a>
+          <div id="avatar" class="memberAvatar">
+            王
+            <div class="memberMenu">
+              <ul>
+                <li>
+                  Hi,王大明
+                </li>
+                <hr class="divider">
+                <li>
+                  <a href="system_member_list.html" alt="member list">會員列表</a>
+                </li>
+                <li>
+                  <!-- 依據權限判斷連結的頁面 -->
+                  <a href="editMember.html" alt="edit admin">個人檔案</a>
+                  <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+                </li>
+                <hr class="divider" style="margin-bottom: 22px;">
+                <li class="logOut">
+                  登出
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <img src="/images/bg_form.svg" alt="bg green" class="bgGreen">
+      <div class="dialog">
+        <img src="images/dialog_green.svg" alt="dialog_green" class="dialogContent">
+        <img src="images/dialog_blue.svg" alt="dialog_blue" class="dialogShadow">
+        <div class="dialogText">
+          這邊要放字這邊要放字這邊要放字這邊要放字這邊要放字這邊要放字這邊要放字這邊要放字
+        </div>
+      </div>
+      <div class="formWrapper">
+        <div class="formContent">
+          <div class="formTab">
+            <!-- 未選取補上 class => nonActivated -->
+            <a href="signup.html" alt="註冊" class="tabTitle">註冊</a>
+            <a href="login.html" alt="登入" class="tabTitle nonActivated">登入</a>
+          </div>
+          <div class="formDescription">請完整填寫下方欄位，以完成註冊流程</div>
+          <div class="form">
+            <!-- inputBox如錯誤補上 class => error -->
+            <div class="inputBox">
+              <!-- inputRow如有值補上 class => hasText -->
+              <div class="inputRow">
+                <input type="text" class="formInput" name="email"/>
+                <label class="formLabel">輸入Email</label>
+              </div>
+              <div class="errorText"></div>
+            </div>
+            <div class="inputBox">
+              <div class="inputRow">
+                <input type="password" class="formInput" name="password"/>
+                <label class="formLabel">設定密碼</label>
+              </div>
+              <div class="errorText"></div>
+            </div>
+            <div class="inputBox">
+              <div class="inputRow">
+                <input type="password" class="formInput" name="passwordConfirm"/>
+                <label class="formLabel">再次確認密碼</label>
+              </div>
+              <div class="errorText"></div>
+            </div>
+            <hr class="divider">
+            <div class="inputBox">
+              <div class="inputRow">
+                <input type="text" class="formInput"/>
+                <label class="formLabel">姓名</label>
+              </div>
+              <div class="errorText"></div>
+            </div>
+            <div class="radioBox">
+              <div class="radioTitle">性別</div>
+              <div class="radioRow">
+                <label for="gender" class="radioLabel">
+                  <input type="radio" class="formRadio" name="gender" checked>
+                  男
+                </label>
+                <label for="gender" class="radioLabel">
+                  <input type="radio" class="formRadio" name="gender">
+                  女
+                </label>
+              </div>
+            </div>
+            <div class="selectBox">
+              <div class="selectRow">
+                <select class="formSelect" name="school">
+                  <option value="">請選擇學校</option>
+                  <option value="1">國立大樹大學</option>
+                </select>
+                <label class="formLabel">學校</label>
+              </div>
+              <div class="errorText"></div>
+            </div>
+            <div class="selectBox">
+              <div class="selectRow">
+                <select class="formSelect" disabled name="dept">
+                  <option value="">請選擇系別</option>
+                  <option value="1">園藝系</option>
+                </select>
+                <label class="formLabel">系別</label>
+              </div>
+              <div class="errorText"></div>
+            </div>
+            <div class="inputBox">
+              <div class="inputRow">
+                <input type="text" class="formInput"/>
+                <label class="formLabel">聯絡電話</label>
+              </div>
+              <div class="errorText"></div>
+            </div>
+            <div class="updateBox">
+              <div class="updateTitle">在學證明</div>
+              <div class="updateDescription">請上傳學生證或當學期在學證明相關文件之jpg圖檔，
+                檔案需小於1M</div>
+              <div class="upadatePreview">
+                <img id="removeIcon" src="/images/removeImage.svg" alt="remove image icon" class="removeImageIcon">
+                <img id="upadatePhoto" src="" alt="photo" class="updatePhoto">
+              </div>
+              <div class="upadateButtonBox">
+                <div class="updateButton">
+                  <input id="updateFile" type="file" accept="image/jpg" name="file">
+                  上傳圖片
+                </div>
+              </div>
+            </div>
+            <hr class="divider">
+            <div class="policyBox">
+              <div class="policyRow">
+                <input type="checkbox" class="formCheckBox" name="policy">
+                <label class="checkBoxClick"></label>
+                我已閱讀且同意<a href="#" id="showPolicy">會員隱私權條款</a>
+              </div>
+            </div>
+            <div class="buttonBox">
+              <button type="submit" class="button" name="signUp">註冊</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside id="popUp" class="popUp">
+        <div class="popUpBackground"></div>
+        <div class="popUpBox scroll">
+          <img id="closePopUp" src="/images/closePopUp.svg" alt="close pop up icon" class="closePopUpIcon">
+          <div class="popUpWrapper">
+            <div class="popUpTitle">會員隱私權條款</div>
+            <div class="popUpContent">國泰金融控股股份有限公司及其子公司或關係企業（國泰人壽保險股份有限公司、國泰世華商業銀行股份有限公司、國泰世紀產物保險股份有限公司、國泰綜合證券股份有限公司、國泰創業投資股份有限公司、國泰證券投資信託股份有限公司）以下簡稱本集團，重視會員的隱私權且遵循「個人資料保護法」之規定，制訂會員隱私權條款，您可參考下列條款之內容。
+
+              1. 個人資料之安全
+              未經會員同意之下，絕不會將會員的個人資料提供予任何與本招募網站服務無關之第三者。會員應妥善保密自己的網路密碼及個人資料，勿將任何個人資料，尤其是網路密碼提供給任何人。在使用本招募網站所提供的各項服務功能後，請務必登出帳戶，若與他人共享電腦或使用公共電腦，切記關閉瀏覽器視窗。
+              
+              2. 個人資料蒐集、處理、國際傳輸及利用
+              本集團 依據個人資料保護法等相關法令規定，於蒐集您個人資料時，應明確告知下述事項:基於辦理人才招募、履行法定義務、其他依法令許可及訴訟、非訟、仲裁或其他紛爭解決事件之處理(下稱蒐集目的)需要， 本集團 於所涉業務執行之必要範圍內，除相關法令明文限制外，將蒐集您提供之 姓名、性別、電子郵件、連絡電話、學歷、興趣職缺及本次人才招募相關書件要求提供之個人資料等。本集團 僅依前開個人資料蒐集目的存續期間、相關法令規定、執行業務所必須之保存期間、個別契約所定之保存期間或為您相關權益(如：預供查詢)之期間(以孰後屆至者為準)，將前開個人資料供本集團、本集團之關係企業、因前開蒐集目的之作業需要受本集團委託處理事務之委外廠商或依法有權機關(構)與金融監理機關，以自動化機器或其他非自動化之方式，於前揭對象之國內及國外所在地，依個人資料保護相關法規蒐集、處理、國際傳輸及利用。本集團保有您的個人資料時，依個人資料保護法之規定，您得向 本集團 人事管理單位行使下述權利：(1)查詢、請求閱覽或請求製給複製本，而本集團依法得酌收必要成本費用；(2)請求更正、補充個人資料，惟依法需先適當釋明其原因及事實；(3)請求停止蒐集、處理或利用；(4)在個人資料正確性有爭議時，請求停止處理或利用個人資料，惟本集團因執行職務或業務所必須，或經您的書面同意，並經註明其爭議者，不在此限；(5) 於前開蒐集目的消失或期限屆滿時，請求刪除、停止處理或利用您的個人資料，惟因本集團執行職務或業務所必須或經您書面同意者，不在此限。您得自由選擇是否提供完整個人資料，若您選擇不提供、提供不完全或不正確，或請求刪除或停止蒐集、處理與利用其個人資料時，本集團將無法提供您完善的徵才訊息。
+              
+              3. 資料安全
+              為保障會員的隱私及安全，會員帳號資料皆會用密碼保護。本集團將盡力以合理之技術及程序，保障所有個人資料之安全。
+              
+              4. 資料查詢或更正的方式
+              會員對於其個人資料，有查詢及閱覽、補充或更正、停止電腦處理及利用、刪除等需求時，可以與本集團人力資源部聯絡，將迅速進行處理。
+              
+              5. Cookie
+              為了便利會員使用，本招募網站會使用cookie技術，以便於提供會員所需要的服務；cookie是網站伺服器用來和會員瀏覽器進行溝通的一種技術，它可能在會員的電腦中隨機儲存字串，用以辨識區別使用者，若會員關閉cookie有可能導致無法順利登入網站等狀況。
+              
+              6. 隱私權保護政策修訂
+              隨著市場環境的改變本集團將會不時修訂網站政策。會員如果對於網站隱私權聲明、個人資料之相關事項有任何疑問，可以利用本網站求職Ｑ＆Ａ功能分頁作發問或與本集團人力資源部聯絡。
+              
+              7. 會員權益聲明
+              為了保障會員權益，請確認所填事項均屬真實，如有不實願負法律責任；並同意錄取後，本集團得向財團法人金融聯合徵信中心及財團法人聯合信用卡處理中心查詢本人往來金融機構資料。
+              
+              「本人已詳閱並瞭解告知的內容，同意得依告知內容蒐集、處理、國際傳輸及利用本人之個人資料。」
+              </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script>
+    $(function() {
+      $("#showPolicy").click(function(e) {
+        e.preventDefault();
+        $("html").addClass("fixed");
+        $("#popUp").show();
+      });
+
+      $("#closePopUp").click(function(e) {
+        e.preventDefault();
+        $("html").removeClass("fixed");
+        $("#popUp").hide();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+.memberListWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1196px;
+  margin: auto;
+  padding: 120px 0 100px;
+  text-align: center;
+}
+
+.tableHeader {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  .tableTitle {
+    display: inline-flex;
+    font-family: $font-stack;
+    font-weight: 500;
+    font-size: fontSizeAdjustment(3) * 1rem;
+    line-height: 43px;
+    color: #000000;
+  }
+  .link {
+    position: relative;
+    font-size: fontSizeAdjustment(1.8) * 1rem;
+    margin-left: auto;
+    .toolMenu {
+      width: 106px;
+      top: 126%;
+      right: 0;
+      left: initial;
+      li {
+        font-size: fontSizeAdjustment(1.6) * 1rem;
+        margin-bottom: 4px;
+        box-sizing: border-box;
+        color: #000000;
+      }
+    }
+  }
+}
+
+.toolBar {
+  display: flex;
+  .form {
+    position: relative;
+    display: flex;
+    margin-right: auto;
+    margin-bottom: 22px;
+    .inputBox,
+    .selectBox {
+      width: 280px;
+      padding: 0;
+      margin: 0 10px 0 0;
+      .searchIcon {
+        position: absolute;
+        top: 15px;
+        left: 14px;
+        width: 20px;
+        height: 20px;
+      }
+      .searchInput {
+        padding: 0 14px 0 44px;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  .button {
+    width: 210px;
+    font-size: fontSizeAdjustment(1.6) * 1rem;
+  }
+}
+
+.toolMenu,
+.memberMenu {
+  display: none;
+  position: absolute;
+  border: 1px solid #6a6a6a;
+  border-radius: 3px;
+  padding: 13px 0;
+  background: #ffffff;
+  z-index: 1;
+  a {
+    color: #000000;
+    &:hover,
+    &:active {
+      color: #000000;
+    }
+  }
+  li {
+    font-size: fontSizeAdjustment(1.6) * 1rem;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    color: #000000;
+  }
+}
+
+.tableWrapper {
+  .tableCheckBox {
+    width: 18px;
+    height: 18px;
+  }
+  .table {
+    position: relative;
+    width: 100%;
+  }
+  .tableHead {
+    background: #E2EDE8;
+    tr {
+      th {
+        position: relative;
+        font-family: $font-stack;
+        font-size: fontSizeAdjustment(1.6) * 1rem;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: $init-text-color;
+        height: 64px;
+        text-align: left;
+        &:first-child {
+          padding: 0 20px 0 20px;
+          width: 5%;
+          .tableCheckBox {
+            opacity: 0;
+            position: absolute;
+            top: 17px;
+            margin-top: 8px;
+            width: 18px;
+            height: 18px;
+            z-index: 1;
+            cursor: pointer;
+            &:checked {
+              + .checkBoxClick {
+                &::before { 
+                  background: $init-green;
+                }
+                &::after {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          .checkBoxClick {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 20px;
+          }
+        }
+        &:nth-child(2) {
+          width: 10%;
+        }
+        &:nth-child(3) {
+          width: 16%;
+        }
+        &:nth-child(4) {
+          width: 10%;
+        }
+        &:nth-child(5) {
+          width: 8%;
+        }
+        &:nth-child(6) {
+          width: 15%;
+        }
+        &:nth-child(7) {
+          width: 20%;
+        }
+        &:nth-child(8) {
+          width: 8%;
+        }
+        &:last-child {
+          width: 8%;
+          padding: 0 58px;
+          text-align: center;
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .tableBody {
+    tr {
+      &.active {
+        background: #fafafa;
+      }
+      td {
+        position: relative;
+        font-family: $font-stack;
+        font-size: fontSizeAdjustment(1.6) * 1rem;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: $init-text-color;
+        height: 64px;
+        border-bottom: 1px solid #efefef;
+        text-align: left;
+        .toolMenu {
+          width: 66px;
+          top: 72%;
+          left: 38px;
+          li {
+            font-size: fontSizeAdjustment(1.6) * 1rem;
+            margin-bottom: 4px;
+            box-sizing: border-box;
+            color: #000000;
+          }
+          .delMember {
+            cursor: pointer;
+          }
+        }
+        &:first-child {
+          padding: 0 20px 0 20px;
+          width: 5%;
+          .tableCheckBox {
+            opacity: 0;
+            position: absolute;
+            top: 17px;
+            margin-top: 8px;
+            width: 18px;
+            height: 18px;
+            z-index: 1;
+            cursor: pointer;
+            &:checked {
+              + .checkBoxClick {
+                &::before { 
+                  background: $init-green;
+                }
+                &::after {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          .checkBoxClick {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 20px;
+          }
+        }
+        &:nth-child(5) {
+          padding-left: 8px;
+        }
+        &:last-child {
+          padding: 0 58px;
+          text-align: center;
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .memberListWrapper {
+    min-width: 920px;
+  }
+  .toolBar .form .inputBox, .toolBar .form .selectBox {
+    width: 200px;
+  }
+}

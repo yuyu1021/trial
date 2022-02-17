@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- showStatus為顯示右下角狀態彈出 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>會員檔案 | 管理員</title>
+</head>
+<body>
+  <div class="mainWrapper systemPage showStatus">
+    <header class="headerWrapper">
+      <div class="headerContainer">
+        <a href="index.html" alt="logo" class="logo">
+          <img src="images/logo.svg" alt="logo" class="logoImage">
+        </a>
+        <nav class="headerNav">
+          <a href="#" alt="財務投資" class="nav">
+            財務投資
+          </a>
+          <a href="#" alt="業務菁英" class="nav">
+            業務菁英
+          </a>
+          <a href="#" alt="數位科技" class="nav">
+            數位科技
+          </a>
+          <a href="#" alt="數理精算" class="nav">
+            數理精算
+          </a>
+        </nav>
+        <!-- 手機版menu -->
+        <div id="headerMenuIcon" class="headerMenuIcon"></div>
+        <div class="mobileHeaderMenu">
+          <div class="mobileAvatarBox">
+            <div class="mobileMemberAvatar">
+              王
+            </div>
+            <div class="mobileMemberName">
+              Hi,王大明
+            </div>
+          </div>
+          <div class="mobileMenuList">
+            <ul>
+              <li>
+                <a href="learning_achievement.html" alt="learning achievement">學習成就</a>
+              </li>
+              <li>
+                <!-- 依據權限判斷連結的頁面 -->
+                <a href="editMember.html" alt="edit admin">個人檔案</a>
+                <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+              </li>
+              <div class="divider">
+                <span>課程學習</span>
+              </div>
+              <li>
+                <a href="" alt="financial investment">財務投資</a>
+              </li>
+              <li>
+                <a href="" alt="Business elite">業務菁英</a>
+              </li>
+              <li>
+                <a href="" alt="digital technology">數位科技</a>
+              </li>
+              <li>
+                <a href="" alt="mathematical actuarial">數理精算</a>
+              </li>
+              <hr class="divider">
+              <li class="logOut">登出</li>
+            </ul>
+          </div>
+        </div>
+        <!--- 如以登入headerRightArea補上 login-->
+        <div class="headerRightArea login">
+          <a href="signup.html" alt="註冊/登入" class="loginButton">
+            註冊 / 登入
+          </a>
+          <div id="avatar" class="memberAvatar">
+            王
+            <div class="memberMenu">
+              <ul>
+                <li>
+                  Hi,王大明
+                </li>
+                <hr class="divider">
+                <li>
+                  <a href="system_member_list.html" alt="member list">會員列表</a>
+                </li>
+                <li>
+                  <!-- 依據權限判斷連結的頁面 -->
+                  <a href="editMember.html" alt="edit admin">個人檔案</a>
+                  <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+                </li>
+                <hr class="divider" style="margin-bottom: 22px;">
+                <li class="logOut">
+                  登出
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </header>
+    <main class="container">
+      <div class="memberFormWrapper">
+        <div class="memberFormHeader">
+          <div class="memberFormTitle">會員檔案 / 新增管理員</div>
+          <div class="buttonBox">
+            <button type="submit" class="button" name="editAdmin">儲存</button>
+          </div>
+        </div>
+        <div class="memberFormContainer">
+          <div class="memberFormContent">
+            <div class="memberFormTitle">會員資料</div>
+            <div class="memberForm form">
+              <div class="inputBox">
+                <div class="inputRow hasText">
+                  <input type="text" class="formInput" value="王大明"/>
+                  <label class="formLabel">姓名</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <!-- inputBox如錯誤補上 class => error -->
+              <div class="inputBox">
+                <!-- inputRow如有值補上 class => hasText -->
+                <div class="inputRow hasText">
+                  <input type="text" class="formInput" value="daming@cmail.com" name="email"/>
+                  <label class="formLabel">Email</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <div class="toolBox">
+                <a href="reset_password.html" id="showPasswordForm" class="link">重設密碼</a>
+              </div>
+              <hr class="divider">
+              <div class="selectBox">
+                <div class="selectRow">
+                  <select class="formSelect">
+                    <option value="1">開啟</option>
+                    <option value="2">關閉</option>
+                  </select>
+                  <label class="formLabel">會員狀況</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="statusBox">
+      更新成功！
+    </aside>
+  </div>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

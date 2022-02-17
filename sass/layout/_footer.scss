@@ -1,0 +1,106 @@
+.footerWrapper {
+  position: relative;
+  background: #CEEB3E;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: $init-width;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.footerTop {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+  .link {
+    font-weight: 500;
+    font-size: fontSizeAdjustment(1.8) * 1rem;
+    line-height: 26px;
+    cursor: auto;
+  }
+}
+
+.footerBottom {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .footerInfoArea {
+    display: flex;
+    .footerInfoBar {
+      display: flex;
+      margin-right: 30px;
+      flex-wrap: wrap;
+      &:last-child {
+        margin: 0;
+      }
+      .name {
+        font-family: $font-stack;
+        font-size: fontSizeAdjustment(1.6) * 1rem;
+        line-height: 20px;
+        color: $init-text-color;
+        border-right: 2px solid $init-green;
+        padding-right: 12px;
+        margin-right: 12px;
+        box-sizing: border-box;
+      }
+      .weblink {
+        font-family: $font-stack;
+        font-size: fontSizeAdjustment(1.6) * 1rem;
+        line-height: 20px;
+        color: $init-text-color;
+      }
+    }
+  }
+  .footerCopyright {
+    font-family: $font-stack;
+    font-size: fontSizeAdjustment(1.4) * 1rem;
+    line-height: 20px;
+    color: $init-text-color;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .footerTop {
+    margin-bottom: 16px;
+    .link {
+      text-align: center;
+    }
+  }
+  .footerBottom {
+    flex-direction: column;
+    .footerInfoArea {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .footerBottom {
+    flex-direction: column;
+    .footerInfoArea {
+      flex-direction: column;
+      margin-bottom: 26px;
+      .footerInfoBar {
+        margin-right: 0;
+        margin-bottom: 12px;
+        justify-content: center;
+      }
+    }
+    .footerCopyright {
+      text-align: center;
+      span {
+        display: block;
+      }
+    }
+  }
+}

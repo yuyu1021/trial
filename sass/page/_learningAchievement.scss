@@ -1,0 +1,140 @@
+.achievementWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 130px;
+  text-align: center;
+}
+
+.achievementName {
+  position: relative;
+  margin-bottom: 30px;
+  .achievementNameImage {
+    position: relative;
+    width: 313px;
+  }
+}
+
+.achievementDescription {
+  font-family: $font-stack;
+  font-size: fontSizeAdjustment(1.8) * 1rem;
+  line-height: 26px;
+  color: $init-gray;
+  margin-bottom: 60px;
+}
+
+.certificateContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .certificateBox {
+    display: flex;
+    width: 188px;
+    flex-direction: column;
+    margin-right: 50px;
+    &:last-child {
+      margin: 0;
+    }
+    .certificateTitle {
+      position: relative;
+      margin-bottom: 30px;
+      .title {
+        position: absolute;
+        top: 14px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        color: $init-text-color;
+      }
+      .certificateTitleImage {
+        width: 100%;
+      }
+      .certificateTitleImageGray {
+        width: 100%;
+        display: none;
+      }
+    }
+    .certificateImageBox {
+      margin-bottom: 40px;
+    }
+    .buttonBox {
+      margin-bottom: 20px;
+      .button {
+        display: none;
+      }
+    }
+    .toolBox {
+      .link {
+        color: $init-gray;
+        font-size: fontSizeAdjustment(1.8) * 1rem;
+      }
+    }
+    &.disabled {
+      .certificateTitle {
+        .title {
+          color: #ffffff;
+        }
+        .certificateTitleImage {
+          display: none;
+        }
+        .certificateTitleImageGray {
+          display: block;
+        }
+      }
+      .buttonBox {
+        .borderButton {
+          display: none;
+        }
+        .button {
+          display: flex;
+        }
+      }
+      .toolBox {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .learningAchievementPage .container{
+    height: auto;
+    padding: 0 0 60px;
+  }
+  .achievementDescription {
+    padding: 0 35px;
+    box-sizing: border-box;
+  }
+
+  .certificateContent {
+    position: relative;
+    display: inline-flex;
+    flex-flow: wrap;
+    max-width: 600px;
+    .certificateBox {
+      margin-right: 34px;
+      margin-bottom: 50px;
+      &:nth-child(2),
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+  .certificateContent {
+    position: relative;
+    display: inline-flex;
+    flex-flow: wrap;
+    min-width: 100%;
+    .certificateBox {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+}

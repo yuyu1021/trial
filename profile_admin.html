@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>個人檔案-管理員</title>
+</head>
+<body>
+  <div class="mainWrapper profilePage">
+    <header class="headerWrapper">
+      <div class="headerContainer">
+        <a href="index.html" alt="logo" class="logo">
+          <img src="images/logo.svg" alt="logo" class="logoImage">
+        </a>
+        <nav class="headerNav">
+          <a href="#" alt="財務投資" class="nav">
+            財務投資
+          </a>
+          <a href="#" alt="業務菁英" class="nav">
+            業務菁英
+          </a>
+          <a href="#" alt="數位科技" class="nav">
+            數位科技
+          </a>
+          <a href="#" alt="數理精算" class="nav">
+            數理精算
+          </a>
+        </nav>
+        <!-- 手機版menu -->
+        <div id="headerMenuIcon" class="headerMenuIcon"></div>
+        <div class="mobileHeaderMenu">
+          <div class="mobileAvatarBox">
+            <div class="mobileMemberAvatar">
+              王
+            </div>
+            <div class="mobileMemberName">
+              Hi,王大明
+            </div>
+          </div>
+          <div class="mobileMenuList">
+            <ul>
+              <li>
+                <a href="learning_achievement.html" alt="learning achievement">學習成就</a>
+              </li>
+              <li>
+                <!-- 依據權限判斷連結的頁面 -->
+                <a href="editMember.html" alt="edit admin">個人檔案</a>
+                <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+              </li>
+              <div class="divider">
+                <span>課程學習</span>
+              </div>
+              <li>
+                <a href="" alt="financial investment">財務投資</a>
+              </li>
+              <li>
+                <a href="" alt="Business elite">業務菁英</a>
+              </li>
+              <li>
+                <a href="" alt="digital technology">數位科技</a>
+              </li>
+              <li>
+                <a href="" alt="mathematical actuarial">數理精算</a>
+              </li>
+              <hr class="divider">
+              <li class="logOut">登出</li>
+            </ul>
+          </div>
+        </div>
+        <!--- 如以登入headerRightArea補上 login-->
+        <div class="headerRightArea login">
+          <a href="signup.html" alt="註冊/登入" class="loginButton">
+            註冊 / 登入
+          </a>
+          <div id="avatar" class="memberAvatar">
+            王
+            <div class="memberMenu">
+              <ul>
+                <li>
+                  Hi,王大明
+                </li>
+                <hr class="divider">
+                <li>
+                  <a href="system_member_list.html" alt="member list">會員列表</a>
+                </li>
+                <li>
+                  <!-- 依據權限判斷連結的頁面 -->
+                  <a href="editMember.html" alt="edit admin">個人檔案</a>
+                  <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+                </li>
+                <hr class="divider" style="margin-bottom: 22px;">
+                <li class="logOut">
+                  登出
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <img src="/images/bg_profile.svg" alt="bg profile" class="bgProfile">
+      <div class="formWrapper center">
+        <div class="formName">
+          <img src="/images/profileTitle.svg" alt="form name image" class="formNameImage">
+        </div>
+        <div class="formContent">
+          <div class="form">
+            <div class="memberName">王大明</div>
+            <div class="memberDescription">管理員</div>
+            <hr class="divider">
+            <div class="textBox">
+              <div class="title">Email</div>
+              <div class="text">daming@cmail.com</div>
+            </div>
+            <div class="toolBox">
+              <div id="showPasswordForm" class="link">重設密碼</div>
+            </div>
+          </div>
+        </div>
+        <div class="formNotice">若資訊有誤，請聯繫客服信箱 cathay@cmail.com</div>
+      </div>
+    </main>
+    <footer class="footerWrapper">
+      <div class="footerContainer">
+        <div class="footerTop">
+          <div class="link">CONTACT US</div> 
+        </div>
+        <div class="footerBottom">
+          <div class="footerInfoArea">
+            <div class="footerInfoBar">
+              <div class="name">線上課程</div>
+              <div class="weblink">domingo@cathaylife.com.tw</div>
+            </div>
+            <div class="footerInfoBar">
+              <div class="name">天職學計畫</div>
+              <div class="weblink">mengzhed@cathaylife.com.tw</div>
+            </div>
+          </div>
+          <div class="footerCopyright">
+            &copy; 2022 國泰天職學 All Rights Reserved. <span>Made by DailyInnovation, Inc.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <aside id="popUp" class="popUp">
+      <div class="popUpBackground"></div>
+      <div class="popUpBox">
+        <img id="closePopUp" src="/images/closePopUp.svg" alt="close pop up icon" class="closePopUpIcon">
+        <div class="popUpWrapper">
+          <div class="formContent">
+            <div class="formTitle">重設密碼</div>
+            <div class="form">
+              <div class="inputBox">
+                <div class="inputRow">
+                  <input type="password" class="formInput" name="oldPassword"/>
+                  <label class="formLabel">原密碼</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <hr class="divider">
+              <div class="inputBox">
+                <div class="inputRow">
+                  <input type="password" class="formInput" name="password" disabled/>
+                  <label class="formLabel">輸入新密碼</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <div class="inputBox marginBottom40">
+                <div class="inputRow">
+                  <input type="password" class="formInput" name="passwordConfirm" disabled/>
+                  <label class="formLabel">再次輸入新密碼</label>
+                </div>
+                <div class="errorText"></div>
+              </div>
+              <div class="buttonBox">
+                <button type="submit" class="button" name="resetPassword">確定重設密碼</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script>
+    $(function() {
+      $("#showPasswordForm").click(function(e) {
+        e.preventDefault();
+        $("html").addClass("fixed");
+        $("#popUp").show();
+      });
+
+      $("#closePopUp").click(function(e) {
+        e.preventDefault();
+        $("html").removeClass("fixed");
+        $("#popUp").hide();
+      });
+    });
+  </script>
+</body>
+</html>

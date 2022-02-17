@@ -1,0 +1,30 @@
+.dialog {
+  position: absolute;
+  left: 74px;
+  top: 202px;
+  width: 510px;
+  height: 175px;
+}
+
+.dialogContent {
+  position: absolute;
+  z-index: 1;
+}
+
+.dialogShadow {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.dialogText {
+  position: relative;
+  width: 95%;
+  height: 90%;
+  padding: 38px 0 0 44px;
+  font-family: $font-stack;
+  font-size: fontSizeAdjustment(2.1) * 1rem;
+  color: #000000;
+  z-index: 2;
+  box-sizing: border-box;
+}

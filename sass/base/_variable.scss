@@ -1,0 +1,32 @@
+$font-stack-en: "Roboto", Arial, sans-serif;
+$font-stack: "NotoSansTC", Arial, sans-serif;
+
+$font-size-xl: 34px;
+$font-size-l: 22px;
+$font-size-m: 20px;
+$font-size-s: 18px;
+$font-size-xs: 14px;
+
+$init-width: 1440px;
+
+$init-text-color: #30352E;
+$init-error-color: #EB6366;
+$init-gray: #7a7a7a;
+$init-green: #00904F;
+
+@function fontSizeAdjustment($fontSize) {
+  $result: $fontSize * 0.625;
+  @return $result;
+}
+
+@font-face {
+  font-family: "NotoSansTC";
+  src: url("/fonts/NotoSansTC-Regular.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf");
+  font-display: swap;
+}

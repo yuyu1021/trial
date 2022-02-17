@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>後台-會員列表</title>
+</head>
+<body>
+  <div class="mainWrapper systemPage">
+    <header class="headerWrapper">
+      <div class="headerContainer">
+        <a href="index.html" alt="logo" class="logo">
+          <img src="images/logo.svg" alt="logo" class="logoImage">
+        </a>
+        <nav class="headerNav">
+          <a href="#" alt="財務投資" class="nav">
+            財務投資
+          </a>
+          <a href="#" alt="業務菁英" class="nav">
+            業務菁英
+          </a>
+          <a href="#" alt="數位科技" class="nav">
+            數位科技
+          </a>
+          <a href="#" alt="數理精算" class="nav">
+            數理精算
+          </a>
+        </nav>
+        <!-- 手機版menu -->
+        <div id="headerMenuIcon" class="headerMenuIcon"></div>
+        <div class="mobileHeaderMenu">
+          <div class="mobileAvatarBox">
+            <div class="mobileMemberAvatar">
+              王
+            </div>
+            <div class="mobileMemberName">
+              Hi,王大明
+            </div>
+          </div>
+          <div class="mobileMenuList">
+            <ul>
+              <li>
+                <a href="learning_achievement.html" alt="learning achievement">學習成就</a>
+              </li>
+              <li>
+                <!-- 依據權限判斷連結的頁面 -->
+                <a href="editMember.html" alt="edit admin">個人檔案</a>
+                <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+              </li>
+              <div class="divider">
+                <span>課程學習</span>
+              </div>
+              <li>
+                <a href="" alt="financial investment">財務投資</a>
+              </li>
+              <li>
+                <a href="" alt="Business elite">業務菁英</a>
+              </li>
+              <li>
+                <a href="" alt="digital technology">數位科技</a>
+              </li>
+              <li>
+                <a href="" alt="mathematical actuarial">數理精算</a>
+              </li>
+              <hr class="divider">
+              <li class="logOut">登出</li>
+            </ul>
+          </div>
+        </div>
+        <!--- 如以登入headerRightArea補上 login-->
+        <div class="headerRightArea login">
+          <a href="signup.html" alt="註冊/登入" class="loginButton">
+            註冊 / 登入
+          </a>
+          <div id="avatar" class="memberAvatar">
+            王
+            <div class="memberMenu">
+              <ul>
+                <li>
+                  Hi,王大明
+                </li>
+                <hr class="divider">
+                <li>
+                  <a href="system_member_list.html" alt="member list">會員列表</a>
+                </li>
+                <li>
+                  <!-- 依據權限判斷連結的頁面 -->
+                  <a href="editMember.html" alt="edit admin">個人檔案</a>
+                  <!-- <a href="editAdmin.html" alt="edit admin">個人檔案</a> -->
+                </li>
+                <hr class="divider" style="margin-bottom: 22px;">
+                <li class="logOut">
+                  登出
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </header>
+    <main class="container">
+      <div class="memberListWrapper">
+        <div class="tableHeader">
+          <div class="tableTitle">會員列表</div>
+          <div id="addMember" class="link">+ 新增會員
+            <div class="toolMenu">
+              <ul>
+                <li>
+                  <a href="addMember.html" alt="add member">一般會員</a>
+                </li>
+                <li>
+                  <a href="addAdmin.html" alt="edit admin">管理員</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="toolBar">
+          <div class="form">
+            <div class="inputBox">
+              <div class="inputRow">
+                <input id="search" type="text" class="formInput searchInput" placeholder="透過電話號碼搜尋"/>
+                <img src="images/search.svg" alt="search icon" class="searchIcon">
+              </div>
+            </div>
+            <div class="selectBox">
+              <div class="selectRow">
+                <select class="formSelect">
+                  <option value="">全部學校</option>
+                </select>
+                <label class="formLabel">學校</label>
+              </div>
+            </div>
+            <div class="selectBox">
+              <div class="selectRow">
+                <select class="formSelect">
+                  <option value="">一般會員</option>
+                  <option value="">管理員</option>
+                </select>
+                <label class="formLabel">會員權限</label>
+              </div>
+            </div>
+          </div>
+          <div class="buttonBox">
+            <button id="exportInfo" type="button" class="button" disabled>匯出會員資料(.xlsx)</button>
+          </div>
+        </div>
+        <div class="tableWrapper">
+          <table class="table">
+            <thead class="tableHead">
+              <tr>
+                <th>
+                  <input id="selectForm" type="checkbox" class="tableCheckBox">
+                  <label class="checkBoxClick"></label>
+                </th>
+                <th>姓名</th>
+                <th>學校</th>
+                <th>系別</th>
+                <th>性別</th>
+                <th>電話</th>
+                <th>EMAIL</th>
+                <th>註冊時間</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="tableBody">
+              <tr>
+                <td>
+                  <input type="checkbox" class="tableCheckBox">
+                  <label class="checkBoxClick"></label>
+                </td>
+                <td>王大明</td>
+                <td>國立大樹大學</td>
+                <td>園藝系</td>
+                <td>男</td>
+                <td>0900 000 000</td>
+                <td>daming@cmail.com</td>
+                <td>2022-04-16</td>
+                <td>
+                  <img id="toolButton" src="/images/tool.svg" alt="tool icon" class="toolIcon">
+                  <div class="toolMenu">
+                    <ul>
+                      <li>
+                        <a href="editMember.html" alt="edit member">編輯</a>
+                      </li>
+                      <li class="delMember">刪除</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" class="tableCheckBox">
+                  <label class="checkBoxClick"></label>
+                </td>
+                <td>王大明</td>
+                <td>國立大樹大學</td>
+                <td>園藝系</td>
+                <td>男</td>
+                <td>0900 000 000</td>
+                <td>daming@cmail.com</td>
+                <td>2022-04-16</td>
+                <td>
+                  <img id="toolButton" src="/images/tool.svg" alt="tool icon" class="toolIcon">
+                  <div class="toolMenu">
+                    <ul>
+                      <li>
+                        <a href="editMember.html" alt="edit member">編輯</a>
+                      </li>
+                      <li class="delMember">刪除</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/main.min.js"></script>
+  <script>
+    $(function() {
+      $(document).click(function(e) {
+        if ($(e.target).is("#addMember")) {
+          /* 如果點擊新增會員 則打開選單 */
+          isCheckBoxChecked();
+          $(e.target).children(".toolMenu").show();
+        } else if ($(e.target).is("#toolButton")) {
+          /* 如果點擊table工具 則打開選單 */
+          $(".toolMenu").hide();
+          $(e.target).siblings(".toolMenu").show();
+          $(e.target).parents("tr").addClass("active");
+        // } else if ($(e.target).is("#avatar")) {
+        //   /* 如果點擊頭像 則打開選單 */
+        //   isCheckBoxChecked();
+        //   $(e.target).children(".memberMenu").show();
+        } else if(!$(e.target).is(".toolMenu")
+          && $(".toolMenu").has(e.target).length === 0
+          && !$(e.target).is(".tableCheckBox")) {
+          isCheckBoxChecked();
+        }
+        
+        /* 確認已勾選項目 樣式不會被移除 */
+        function isCheckBoxChecked() {
+          $(".toolMenu").hide();
+          $("tr.active").removeClass("active");
+
+          $("tbody .tableCheckBox").each(function() {
+            if ($(this).prop("checked")) {
+              $(this).parents("tr").addClass("active");
+            } else {
+              $(this).parents("tr").removeClass("active");
+            }
+          });
+        }
+      });
+
+      $("tbody .tableCheckBox").click(function() {
+        $(".toolMenu").hide();
+        if ($(this).prop("checked")) {
+          $(this).parents("tr").addClass("active");
+        } else {
+          $(this).parents("tr").removeClass("active");
+        }
+        
+        /* 偵測勾選項目數量 */
+        if ($("tbody .tableCheckBox:checked").length > 0) {
+          $("#exportInfo").prop("disabled", false);
+        } else {
+          $("#exportInfo").prop("disabled", true);
+        }
+      });
+
+      $("#search").keyup(function(e) {
+        /* 如果點擊enter執行搜尋 */
+        if (e.keyCode === 13) {
+          /* 搜尋 */
+        }
+      });
+
+      $(".delMember").click(function() {
+        /* 點擊單向資料則執行刪除 */
+      });
+
+      $("#selectForm").click(function(e) {
+        if ($(this).prop("checked")) {
+          $("#exportInfo").prop("disabled", false);
+          $(".tableCheckBox").prop("checked", true);
+        } else {
+          $("#exportInfo").prop("disabled", true);
+          $(".tableCheckBox").prop("checked", false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
